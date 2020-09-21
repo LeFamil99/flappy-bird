@@ -72,7 +72,7 @@ document.onkeypress = e => {
     }
 }
 
-document.onclick = e => {
+document.onmousedown = e => {
     if (!dead) {
         player.jump()
     }       
