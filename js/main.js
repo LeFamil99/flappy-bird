@@ -72,4 +72,10 @@ document.onkeypress = e => {
     }
 }
 
+document.onclick = e => {
+    if (!dead) {
+        player.jump()
+    }       
+}
+
 
