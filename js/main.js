@@ -44,7 +44,7 @@ const update = () => {
                 player.death()
                 dead = true
             }
-            if (player.y >= canvas.height - playerRadius ) {
+            if (player.y >= canvas.height - playerRadius - 1) {
                 player.death()
                 dead = true
             }
