@@ -15,7 +15,7 @@ let ingame = false
 let flappy = new Image()
 flappy.src = 'https://lefamil99.github.io/Flappy2.png'
 let pipe = new Image()
-pipe.src = 'https://github.com/LeFamil99/flappy-bird/pipe.png'
+pipe.src = './pipe.png'
 
 let player //= new Player(gravity, canvas.height, canvas.width, jumpStrength, playerRadius);
 let obstacles = [];
