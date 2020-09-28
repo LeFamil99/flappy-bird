@@ -1,5 +1,5 @@
 class Player {
-    constructor(gravity, height, width, jumps, radius) {
+    constructor(gravity, height, width, jumps, radius, i) {
         this.width = width;
         this.gravity = gravity;
         this.height = height;
@@ -9,13 +9,15 @@ class Player {
         this.y = height / 2;
         this.x = width / 2.5;
         this.color = 'yellow'
+        this.i = i;
         
     }
 
     update() {
         this.yVel += gravity / 2
-        this.y = this.y < this.height - this.radius ? this.y + this.yVel : this.y = this.height - this.radius;
-        ctx.clearRect(0, 0, this.width, this.height);
+        this.y = this.y < this.height - this.radius ? this.y + this.yVel * frameLength : this.y = this.height - this.radius;
+        if (this.i === 0)
+            ctx.clearRect(0, 0, this.width, this.height);
         /*ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
         ctx.fillStyle = this.color;
         ctx.fill();*/
